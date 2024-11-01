@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function () {
   return (
     <section>
-      <div className="container mx-auto flex flex-row items-center justify-around mt-6">
+      <div className="container mx-auto flex flex-col justify-center md:flex-row gap-4 items-center md:justify-around mt-6">
         <div>
           <h1 className="text-3xl font-bold text-black ">CareerHub</h1>
         </div>
