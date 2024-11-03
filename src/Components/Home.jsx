@@ -2,9 +2,11 @@ import React from "react";
 import logo from "/assets/images/user.png";
 import { useLoaderData } from "react-router-dom";
 import Category from "./Category";
+import Featured from "./Featured";
 
 export default function () {
-  const jobs = useLoaderData();
+  const { categories, jobs } = useLoaderData();
+
   return (
     <section className="bg-[#f9f9ff]">
       <div className="container mx-auto ">
@@ -36,7 +38,11 @@ export default function () {
         </div>
         {/* job category part */}
         <div className="mt-12">
-          <Category category={jobs}></Category>
+          <Category categories={categories}></Category>
+        </div>
+        {/* Fetured Jobs */}
+        <div>
+          <Featured hire={jobs}></Featured>
         </div>
       </div>
     </section>

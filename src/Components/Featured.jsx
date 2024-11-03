@@ -1,20 +1,20 @@
 import React from "react";
-import Jobs from "./jobs";
+import Hire from "./Hire";
 
-export default function ({ categories }) {
+export default function Featured({ hire }) {
   return (
     <section>
-      <div className="container mx-auto">
+      <div className="container mx-auto mt-12">
         <div className="flex flex-col justify-center items-center">
-          <h1 className="text-4xl font-bold">Job Category List</h1>
+          <h1 className="text-4xl font-bold">Featured Jobs</h1>
           <p className="mt-6 text-gray-400 text-center">
             Explore thousands of job opportunities with all the information you
             need. Its your future
           </p>
         </div>
-        <div className="flex flex-col lg:flex-row justify-around mt-6 gap-6 lg:gap-0">
-          {categories.map((categoy) => (
-            <Jobs key={categoy.id} jobs={categoy}></Jobs>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6  mt-6">
+          {hire.map((company) => (
+            <Hire key={company.id} hires={company}></Hire>
           ))}
         </div>
       </div>

@@ -16,8 +16,18 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        loader: () => fetch("/public/data/categories.json"),
-        element: <Home></Home>,
+        loader: async () => {
+          const [categoriesResponse, jobsResponse] = await Promise.all([
+            fetch("/public/data/categories.json"),
+            fetch("/public/data/jobs.json"),
+          ]);
+
+          const categories = await categoriesResponse.json();
+          const jobs = await jobsResponse.json();
+
+          return { categories, jobs };
+        },
+        element: <Home />,
       },
       {
         path: "/applied-jobs",
