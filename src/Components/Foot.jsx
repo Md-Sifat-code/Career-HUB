@@ -3,7 +3,7 @@ import React from "react";
 export default function Foot() {
   return (
     <section className="bg-black">
-      <div className="container mx-auto bg-black">
+      <div className="container mx-auto bg-black mt-12">
         <div className="footer bg-black text-neutral-content p-10">
           <nav className="">
             <h1 className="text-3xl font-bold">CareerHub</h1>

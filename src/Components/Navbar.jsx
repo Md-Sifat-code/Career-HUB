@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 
 export default function () {
   return (
-    <section>
-      <div className="container mx-auto flex flex-col justify-center md:flex-row gap-4 items-center md:justify-around mt-6">
-        <div>
+    <section className="bg-[#f9f9ff]">
+      <div className="container mx-auto flex flex-col justify-center md:flex-row gap-4 items-center md:justify-around ">
+        <div className="mt-6 mb-6">
           <h1 className="text-3xl font-bold text-black ">CareerHub</h1>
         </div>
         <div>
